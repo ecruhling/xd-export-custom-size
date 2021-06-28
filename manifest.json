@@ -1,0 +1,44 @@
+{
+  "id": "35191439",
+  "name": "Export Custom Image Size",
+  "version": "1.0.0",
+  "description": "Export images at 150% of design size.",
+  "summary": "Allows export of images at 150% of design size, instead of 200%.",
+  "languages": [
+    "en"
+  ],
+  "author": "Erik Ruhling",
+  "helpUrl": "https://resourceatlanta.com",
+  "keywords": [
+    "export",
+    "scale",
+    "size",
+    "png",
+    "3x",
+    "2x",
+    "1x"
+  ],
+  "icons": [
+    {
+      "width": 24,
+      "height": 24,
+      "path": "images/icon@1x.png"
+    },
+    {
+      "width": 48,
+      "height": 48,
+      "path": "images/icon@2x.png"
+    }
+  ],
+  "host": {
+    "app": "XD",
+    "minVersion": "13.0"
+  },
+  "uiEntryPoints": [
+    {
+      "type": "menu",
+      "label": "Export at 150%",
+      "commandId": "exportOneHundredFiftyPercent"
+    }
+  ]
+}
