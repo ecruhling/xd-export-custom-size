@@ -57,7 +57,7 @@ async function exportAt(selection, scale, format) {
                 scale: scale,
                 // quality only matters for JPG
                 quality: format === 'JPG'
-                    ? 100
+                    ? 60
                     : undefined,
             })
         } catch (e) {
@@ -210,8 +210,30 @@ function noSelectionDialog() {
     const dialog = document.createElement("dialog")
 
     dialog.innerHTML = `
-        <form method="dialog">
-			<p>An element must be selected to export.</p>
+        <style>
+            .exportCustomDialog {
+                width: 310px;
+            }
+            .exportCustomDialog .h1 {
+                align-items: center;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: row;
+            }
+            .exportCustomDialog .formatChoice {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 5px 6px 7px;
+            }
+        </style>
+
+        <form class="exportCustomDialog" method="dialog">
+            <h1 class="h1">
+            <span>Export Assets at 150%</span>
+            </h1>
+            <hr />
+			<p>An element must be selected to export!</p>
 			<footer>
 				<button
 					id="ok"
